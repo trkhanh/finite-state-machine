@@ -88,3 +88,11 @@ function onPause (event, fsm) {
 Fired when a transition has been cancelled.
 
 Because a cancelled transition doesn't change teh StateMachine's state, listen for this event to update any already-updating UI, for example to stop any animation, or hide loading icons.
+
+## State Event
+StateEvents are called when state event handlers are triggered.
+
+They give the opportunity to run JavaScript code, as well as modify the transition, such as pausing it or cancelling it.
+
+## ActionEvent
+ActionEvents are the same as StateEvents, but for actions.
