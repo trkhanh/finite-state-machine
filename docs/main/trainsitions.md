@@ -109,4 +109,4 @@ See the following links for more information:
 - The [StateMachine API](../api/statemachine.md) to add and remove event handlers
 - The [handlers](../config/handlers.md) section for more information on event handler pattens 
 - The [events](../api/events.md) section for how to write event handlers that interact with your application
-- The [demo](http://statemachine.davestewart.io/html/api) site (and [source code](../demo)) for various examples of all of the above
+- The [demo](http://kaoengine.io/html/api) site (and [source code](../demo)) for various examples of all of the above
