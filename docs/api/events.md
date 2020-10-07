@@ -63,3 +63,28 @@ The final state is either implicitly declared as the last state parsed while add
 </h4>
 
 When `fsm.reset()` method is called, and the StateMachine has reset to the initial state.
+
+## TransitionEvent
+<h4>
+    <a name="system.pause" href="#system.pause">#</a>
+    <code>pause</code>
+</h4>
+
+Fired when the StateMachine has been paused or unpaused via `fsm.pause()` or `fsm.resume()`.
+
+Hook into this state to update the UI, such as locking it, or displaying a loading icon. Check for paused state via the event's value property:
+
+```js
+function onPause (event, fsm) {
+    $loadingIcon.toggleClass('block', event.value);
+}
+```
+
+<h4>
+    <a name="system.cancel" href="#system.cancel">#</a>
+    <code>cancel</code>
+</h4>
+
+Fired when a transition has been cancelled.
+
+Because a cancelled transition doesn't change teh StateMachine's state, listen for this event to update any already-updating UI, for example to stop any animation, or hide loading icons.
