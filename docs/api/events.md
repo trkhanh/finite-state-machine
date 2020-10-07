@@ -53,3 +53,13 @@ function onCHange (event, fsm) {
     <code>complete</code>
 </h4>
 
+Fired when the state reaches the final state.
+
+The final state is either implicitly declared as the last state parsed while adding transitions, or explicitly declared in options as final.
+
+<h4>
+    <a name="system.reset" href="#system.reset">#</a>
+    <code>reset</code>
+</h4>
+
+When `fsm.reset()` method is called, and the StateMachine has reset to the initial state.
