@@ -1,0 +1,49 @@
+{
+    "name": "finite-state-machine",
+    "version": "0.0.1",
+    "description": "An expressive, feature-rich, event-driven JavaScript finite-state machine",
+    "scripts": {
+      "dev": "webpack --progress --colors --watch --env=dev",
+      "prepublish": "npm run build",
+      "build": "webpack --env=build",
+      "test": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",
+      "demo": "cpx './dist/state-machine.js' ./demo/assets/js --watch | lite-server"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "babel-core": "^6.25.0",
+      "babel-loader": "^7.1.0",
+      "babel-preset-env": "^1.5.2",
+      "babel-eslint": "^7.2.3",
+      "babel-plugin-add-module-exports": "^0.2.1",
+      "babel-preset-es2015": "^6.24.1",
+      "chai": "3.4.1",
+      "cpx": "^1.5.0",
+      "eslint": "1.7.2",
+      "eslint-loader": "1.1.0",
+      "lite-server": "^2.2.2",
+      "mocha": "2.3.4",
+      "mocha-logger": "^1.0.4",
+      "webpack": "^3.0.0",
+      "yargs": "3.32.0"
+    },
+    "main": "dist/state-machine.js",
+    "files": [
+      "dist/state-machine.*"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/trkhanh/finite-state-machine"
+    },
+    "keywords": [
+      "statemachine",
+      "fsm",
+      "state"
+    ],
+    "author": "Khanh Tran",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/trkhanh/finite-state-machine/issues"
+    },
+    "homepage": "https://github.com/trkhanh/finite-state-machine#readme"
+  }
