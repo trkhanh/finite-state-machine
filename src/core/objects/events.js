@@ -1,3 +1,6 @@
+// ------------------------------------------------------------------------------------------------
+// setup
+
 /**
  * @prop {string}       namespace     The Event namespace;   i.e state or action
  * @prop {string}       type          The Event type;        i.e. leave/enter (state) or start/end (action)
@@ -20,18 +23,21 @@ function initialize(event, namespace, type, target, transition) {
     event.transition = transition;
 }
 
+// ------------------------------------------------------------------------------------------------
 // ActionEvent
 export function ActionEvent(type, target, transition) {
     initialize(this, "action", type, target, transition);
 }
 ActionEvent.prototype = event;
 
+// ------------------------------------------------------------------------------------------------
 // StateEvent
 export function StateEvent(type, target, transition) {
     initialize(this, "state", type, target, transition);
 }
 StateEvent.prototype = event;
 
+// ------------------------------------------------------------------------------------------------
 // SystemEvent
 export function SystemEvent(type, value) {
     this.type = type;
@@ -44,6 +50,8 @@ SystemEvent.prototype = {
     value: null,
 };
 
+
+// ------------------------------------------------------------------------------------------------
 // TransitionEvent
 export function TransitionEvent(type) {
     this.type = type;
